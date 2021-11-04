@@ -5,3 +5,6 @@
 
 
 ![Menu](https://github.com/cegepmatane/projet-mobile-2021-CarlosV999/blob/master/doc/maquettes/Brandon/menu.jpg)
+
+
+![Options](https://github.com/cegepmatane/projet-mobile-2021-CarlosV999/blob/master/doc/maquettes/Brandon/options.jpg)
