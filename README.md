@@ -8,8 +8,6 @@
 - Librairie: https://threejs.org/
 - Composant de l’appareil: GPS (pour le scoreboard local)
 
-Le but du jeu est pour le joueur de détruire les vaisseau aliens qui essaient de se poser sur terre.
-
 Résumé : 
 
 Le projet est un shoot'em up fixe en deux dimensions. 
