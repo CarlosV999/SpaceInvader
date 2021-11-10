@@ -19,3 +19,13 @@ Le joueur contrôle un canon laser qu'il peut déplacer horizontalement, au bas 
 Les aliens tentent de détruire le canon en tirant dessus pendant qu'ils s'approchent du bas de l'écran. S'ils l'atteignent ou arrivent jusqu'au sol, ils ont réussi leur invasion et le jeu est fini. De temps en temps, un vaisseau spatial apparait tout en haut de l'écran et fait gagner des points bonus s'il est détruit. Quatre bâtiments destructibles permettent au joueur de se protéger des tirs ennemis. Ces défenses se désintègrent progressivement sous l'effet des projectiles adverses et de ceux du joueur.
 
 L'écran de fin du jeu est un popup avec en arrière plan la partie mis en pause. Le popup affiche un message "Game Over" avec le score indiqué en dessous ainsi que le highscore encore en dessous. Un boutton permettra au joueur de relancer une nouvelle partie, un autre boutton mènera au menu.
+
+**Protocole**:
+Première ouverture -> Verification du local storage si pseudo déjà existant, si oui il récupère les données, sinon il créer le joueur et et récupère les infos.
+Menu swipe vers Classement -> récupère le nom du joueur et le highscore puis l'affiche Et la liste des noms + HS de toute la BDD et les trie et les affiche.
+Vue option -> récupère et affiche dans le champ pseudo le pseudo actuel et permet la modification. Envoie une requête pour le modifier lorsque le joueur appuie sur le boutton d'enregistrement.
+Vue Jeu et game over -> Si highscore modifié met à jour le high score et le rcupère pour afficher. 
+Réouverture de l'application -> récupération highscore et pseudo via l'id enregistré.
+
+**Échantillons des données échangées**:
+JSON
