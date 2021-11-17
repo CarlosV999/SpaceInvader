@@ -1,7 +1,7 @@
 class Application
 {
 
-    constructor(window, vueMenu, vueClassement)
+    constructor(window, vueMenu, vueClassement, vueJeu, vueGameOver)
     {
         this.window = window;
         this.vueMenu = vueMenu;
@@ -28,4 +28,5 @@ class Application
 
 }
 
-new Application(window, new VueMenu(), new VueClassement());
+
+new Application(window, new VueMenu(), new VueClassement(), new VueJeu(), new vueGameOver());
