@@ -13,6 +13,12 @@
     <form id="formulaire-option">
       <fieldset>
         <legend>Son Du Jeu</legend>
+
+        <div hidden>
+          <label for="id"></label>
+          <input type="text" id="id">
+        </div>
+
         <div>
             <label>Musique</label>
             <label class="switch">
@@ -20,6 +26,7 @@
                 <span class="slider round"></span>
               </label>
         </div>
+        
         <div>
             <label>Effets Sonores</label>
             <label class="switch">
@@ -31,8 +38,8 @@
       <fieldset>
         <legend>Mon Pseudo</legend>
         <div>
-          <label for="pseudo">Pseudo</label>
-          <input type="text" id="pseudo"></input>
+          <label for="nom">Votre Nom</label>
+          <input type="text" id="nom"></input>
         </div>
       </fieldset>
       <input class="action" type="submit" id="enregistrer" value="Enregistrer lesModification"/>
