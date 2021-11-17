@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="decoration/menu.css">
+  <link href="http://fonts.cdnfonts.com/css/mrs-kichinto" rel="stylesheet">
+  <script src="vue/VueMenu.js"></script>
+  <script src="vue/VueClassement.js"></script>
+  <script defer src="Application.js"></script>
+
+</head>
+<body>
+    
+  <div id="page-chargement-application"> Chargement de l'applis</div>
+
+  <script type="plain/text" id="html-vue-menu">
+    <div class="frame1"> 
+        <h1>Le nom du jeu</h1>
+    </div> 
+        <div class="frame">
+          <div class="btn-group">
+              <button class="button" type="button"><h2>Jouer</h2></button><br>
+              <button class="button" type="button"><h2>Options</h2></button><br>
+          </div>
+          </div>
+  </script>
+
+  <script type="plain/text" id="html-vue-classement">
+    <div class="frame1"> 
+        <h1>Classement</h1>
+    </div> 
+        <div id="container">
+            <div class="row">
+                <div class="position">#1</div><div class="name">Player1111111111</div><div class="score">153960</div>
+            </div>
+        </div>
+  </script>
+
+  <script type="plain/text" id="html-vue-option">
+    <div class="page">
+        <h1>OPTION</h1>
+        <form id="formulaire-option">
+          <fieldset>
+            <legend>Son Du Jeu</legend>
+            <div>
+                <label>Musique</label>
+                <label class="switch">
+                    <input type="checkbox" id="musique">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+            <div>
+                <label>Effets Sonores</label>
+                <label class="switch">
+                    <input type="checkbox" id="effets-sonores">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Mon Pseudo</legend>
+            <div>
+              <label for="pseudo">Description</label>
+              <input type="text" id="pseudo"></input>
+            </div>
+          </fieldset>
+          <input class="action" type="submit" id="enregistrer" value="Enregistrer Modification"/>
+        </form>
+        <a href="#" class="action">Annuler et revenir &agrave; la liste</a>
+      </div>
+  </script>
+
+  <script type="plain/text" id="html-vue-game-over">
+        <h1>GAME OVER</h1>
+
+        <p>High Score:</p>
+        <p>Score:</p>
+
+        <div class="frame">
+            <div class="btn-group">
+                <button class="button" type="button"><h2>Relancer</h2></button><br>
+                <button class="button" type="button"><h2>Menu</h2></button><br>
+            </div>
+        </div>
+   </script>
+
+</body>
+</html>
