@@ -4,7 +4,9 @@ class Application
     constructor(window, vueMenu, vueClassement)
     {
         this.window = window;
-        
+        this.vueMenu = vueMenu;
+        this.vueClassement = vueClassement;
+        this.vueClassement.afficher();
         
 
         this.window.addEventListener("hashchange", () =>this.naviguer());
@@ -12,27 +14,17 @@ class Application
         
     }
 
-    /*naviguer(){
+    naviguer(){
         let hash = window.location.hash;
     
         if(!hash){
-    
-         
-    
-        }else if(){
-    
-          
-    
+            this.vueMenu.afficher();
         }
-        else if(hash.match()
+        else
         {
-          
-          
+            this.vueMenu.afficher();
         }
-        else{
-        
-        }
-      }*/
+      }
 
 }
 
