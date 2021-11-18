@@ -1,21 +1,28 @@
 class VueClassement{
     constructor(){
       this.html = document.getElementById("html-vue-classement").innerHTML;
-      this.listeClassementDonnee = [{position:"#1", pseudo:"Corvette", score:"199000", id:0},
-                          {position:"#2", pseudo:"Tesla", score:"123523", id:1},
-                          {position:"#3", pseudo:"Honda", score:"153238", id:2}]
+      this.listeClassementDonnee = [{position:"#1", nom:"SuperGeorge", score:"199000", id:0},
+                          {position:"#2", nom:"TheLegend27", score:"123523", id:1},
+                          {position:"#3", nom:"ItsMeMario", score:"153238", id:2},
+                          {position:"#4", nom:"BenOui", score:"174231", id:3},
+                          {position:"#5", nom:"SpomalSaQuierSa", score:"295231", id:4},
+                          {position:"#6", nom:"LaVieEnBlanc", score:"892052", id:5},
+                          {position:"#7", nom:"UnPseudo", score:"724062", id:6},
+                          {position:"#8", nom:"ShiftingGhost", score:"552054", id:7},
+                          {position:"#9", nom:"LuigiIsBetter", score:"242502", id:8},
+                          {position:"#10", nom:"RollingInTheDeep", score:"998231", id:9}]
     }
 
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
 
         for(let positionListe in this.listeClassementDonnee){
-            let classement = new Joueur(this.listeClassementDonnee[positionListe].position,
+            let classement = new Joueur(this.listeClassementDonnee[positionListe].id,
+                                    this.listeClassementDonnee[positionListe].position,
                                     this.listeClassementDonnee[positionListe].nom,
-                                    this.listeClassementDonnee[positionListe].score,
-                                    this.listeClassementDonnee[positionListe].id);
+                                    this.listeClassementDonnee[positionListe].score);
       
-            this.listeClassement[classement.id] = classement;
+            this.listeClassementDonnee[classement.id] = classement;
           }
 
         let listeClassement = document.getElementById("container");
