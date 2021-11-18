@@ -27,7 +27,6 @@ class JeuDAO
         joueur.score = this.banqueJoueurs.score;
         joueur.musique = this.banqueJoueurs.musique;
         joueur.effets = this.banqueJoueurs.effets;
-
     }
 
 }
