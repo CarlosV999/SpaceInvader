@@ -1,11 +1,7 @@
 class Application
 {
 
-<<<<<<< HEAD
-    constructor(window, vueMenu, vueClassement, vueOption)
-=======
-    constructor(window, vueMenu, vueClassement, vueJeu, vueGameOver)
->>>>>>> 24a052af96ef7346cbd8509ec4ee8bab9d194de9
+    constructor(window, vueMenu, vueClassement, vueOption, vueJeu, vueGameOver)
     {
         this.window = window;
         this.vueMenu = vueMenu;
@@ -36,9 +32,4 @@ class Application
 
 }
 
-<<<<<<< HEAD
-new Application(window, new VueMenu(), new VueClassement(), new VueOption());
-=======
-
-new Application(window, new VueMenu(), new VueClassement(), new VueJeu(), new VueGameOver());
->>>>>>> 24a052af96ef7346cbd8509ec4ee8bab9d194de9
+new Application(window, new VueMenu(), new VueClassement(),new VueOption(), new VueJeu(), new VueGameOver());
