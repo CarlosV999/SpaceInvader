@@ -1,21 +1,21 @@
 class VueClassement{
     constructor(){
       this.html = document.getElementById("html-vue-classement").innerHTML;
-      this.listeClassementDonnee = [{position:"#1", pseudo:"Corvette", score:"199000", id:0},
-                          {position:"#2", pseudo:"Tesla", score:"123523", id:1},
-                          {position:"#3", pseudo:"Honda", score:"153238", id:2}]
+      this.listeClassementDonnee = [{position:"#1", nom:"Corvette", score:"199000", id:0},
+                          {position:"#2", nom:"Tesla", score:"123523", id:1},
+                          {position:"#3", nom:"Honda", score:"153238", id:2}]
     }
 
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
 
         for(let positionListe in this.listeClassementDonnee){
-            let classement = new Joueur(this.listeClassementDonnee[positionListe].position,
+            let classement = new Joueur(this.listeClassementDonnee[positionListe].id,
+                                    this.listeClassementDonnee[positionListe].position,
                                     this.listeClassementDonnee[positionListe].nom,
-                                    this.listeClassementDonnee[positionListe].score,
-                                    this.listeClassementDonnee[positionListe].id);
+                                    this.listeClassementDonnee[positionListe].score);
       
-            this.listeClassement[classement.id] = classement;
+            this.listeClassementDonnee[classement.id] = classement;
           }
 
         let listeClassement = document.getElementById("container");

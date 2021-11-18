@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="decoration/classement.css">
     <link href="http://fonts.cdnfonts.com/css/mrs-kichinto" rel="stylesheet">
     <script src="vue/VueMenu.js"></script>
+    <script src="modele/Joueur.js"></script>
     <script src="vue/VueClassement.js"></script>
     <script src="vue/VueJeu.js"></script>
     <script src="vue/VueGameOver.js"></script>
@@ -30,11 +31,11 @@
 
     <script type="plain/text" id="html-vue-classement">
         <div class="frame1"> 
-            <h1>Classement</h1>
+            <h1 href="#">Classement</h1>
         </div> 
         <div id="container">
             <div class="row">
-                <div class="position">#1</div><div class="name">Player1111111111</div><div class="score">153960</div>
+                <div class="position">{Classement.position}</div><div class="name">{Classement.nom}</div><div class="score">{Classement.score}</div>
             </div>
         </div>
     </script>

@@ -5,6 +5,8 @@ class Application
     {
         this.window = window;
         this.vueMenu = vueMenu;
+        this.vueJeu = vueJeu;
+        this.vueGameOver = vueGameOver;
         this.vueClassement = vueClassement;
         this.vueClassement.afficher();
         
@@ -18,15 +20,15 @@ class Application
         let hash = window.location.hash;
     
         if(!hash){
-            this.vueMenu.afficher();
+            this.vueClassement.afficher();
         }
         else
         {
-            this.vueMenu.afficher();
+            this.vueClassement.afficher();
         }
       }
 
 }
 
 
-new Application(window, new VueMenu(), new VueClassement(), new VueJeu(), new vueGameOver());
+new Application(window, new VueMenu(), new VueClassement(), new VueJeu(), new VueGameOver());
