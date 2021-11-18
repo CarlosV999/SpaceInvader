@@ -22,10 +22,6 @@ class Application
         if(!hash){
             this.vueClassement.afficher();
         }
-        else
-        {
-            this.vueClassement.afficher();
-        }
       }
 
 }
