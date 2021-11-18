@@ -6,6 +6,7 @@
   <link href="http://fonts.cdnfonts.com/css/mrs-kichinto" rel="stylesheet">
   <script src="vue/VueMenu.js"></script>
   <script src="vue/VueClassement.js"></script>
+  <script defer src="vue/VueOption.js"></script>
   <script defer src="Application.js"></script>
 
 </head>
@@ -35,37 +36,44 @@
   </script>
 
   <script type="plain/text" id="html-vue-option">
+
     <div class="page">
-        <h1>OPTION</h1>
-        <form id="formulaire-option">
-          <fieldset>
-            <legend>Son Du Jeu</legend>
-            <div>
-                <label>Musique</label>
-                <label class="switch">
-                    <input type="checkbox" id="musique">
-                    <span class="slider round"></span>
-                  </label>
-            </div>
-            <div>
-                <label>Effets Sonores</label>
-                <label class="switch">
-                    <input type="checkbox" id="effets-sonores">
-                    <span class="slider round"></span>
-                  </label>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Mon Pseudo</legend>
-            <div>
-              <label for="pseudo">Description</label>
-              <input type="text" id="pseudo"></input>
-            </div>
-          </fieldset>
-          <input class="action" type="submit" id="enregistrer" value="Enregistrer Modification"/>
-        </form>
-        <a href="#" class="action">Annuler et revenir &agrave; la liste</a>
-      </div>
+      <h1>OPTION</h1>
+      <form id="formulaire-option">
+        <fieldset>
+          <legend>Son Du Jeu</legend>
+  
+          <div hidden>
+            <label for="id"></label>
+            <input type="text" id="id">
+          </div>
+  
+          <div>
+              <label>Musique</label>
+              <label class="switch">
+                  <input type="checkbox" id="musique">
+                  <span class="slider round"></span>
+                </label>
+          </div>
+          
+          <div>
+              <label>Effets Sonores</label>
+              <label class="switch">
+                  <input type="checkbox" id="effets-sonores">
+                  <span class="slider round"></span>
+                </label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Mon Pseudo</legend>
+          <div>
+            <label for="nom">Votre Nom</label>
+            <input type="text" id="nom"></input>
+          </div>
+        </fieldset>
+        <input class="action" type="submit" id="enregistrer" value="Enregistrer lesModification"/>
+      </form>
+      <a href="#" class="action">Annuler et Revenir au Menu</a> 
   </script>
 
   <script type="plain/text" id="html-vue-game-over">
