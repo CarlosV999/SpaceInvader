@@ -9,8 +9,8 @@ class Application
         this.vueClassement = vueClassement;
         this.vueOption = vueOption;
         //this.vueClassement.afficher();
-        this.vueFinDuJeu.afficher();
-        
+        //this.vueFinDuJeu.afficher();
+        this.vueJeu.afficher();
 
         this.window.addEventListener("hashchange", () =>this.naviguer());
         this.naviguer();
@@ -21,8 +21,9 @@ class Application
         let hash = window.location.hash;
     
         if(!hash){
-            this.vueFinDuJeu.afficher();
+            //this.vueFinDuJeu.afficher();
             //this.vueClassement.afficher();
+            this.vueJeu.afficher();
         }
       }
 
