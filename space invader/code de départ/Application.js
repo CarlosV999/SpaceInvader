@@ -1,17 +1,17 @@
 class Application
 {
-
-    constructor(window, vueMenu, jeuDAO, vueClassement, vueOption, vueJeu, vueGameOver)
+    constructor(window, vueMenu, jeuDAO, vueClassement, vueJeu, vueFinDuJeu, vueOption)
     {
         this.window = window;
         this.vueMenu = vueMenu;
         this.vueJeu = vueJeu;
         this.jeuDAO = jeuDAO;
-        this.vueGameOver = vueGameOver;
+        this.vueFinDuJeu = vueFinDuJeu;
         this.vueClassement = vueClassement;
         this.vueOption = vueOption;
-        this.vueClassement.afficher();
-        
+        //this.vueClassement.afficher();
+        //this.vueFinDuJeu.afficher();
+        this.vueJeu.afficher();
 
         this.window.addEventListener("hashchange", () =>this.naviguer());
         this.naviguer();
@@ -28,7 +28,9 @@ class Application
         let hash = window.location.hash;
     
         if(!hash){
-            this.vueClassement.afficher();
+            //this.vueFinDuJeu.afficher();
+            //this.vueClassement.afficher();
+            this.vueJeu.afficher();
         }
       }
 
@@ -36,4 +38,4 @@ class Application
 
 }
 
-new Application(window, new VueMenu(), new JeuDAO, new VueClassement(),new VueOption(), new VueJeu(), new VueGameOver());
+new Application(window, new VueMenu(), new JeuDAO, new VueClassement(), new VueJeu(), new VueFinDuJeu(), new VueOption());

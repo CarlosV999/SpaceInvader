@@ -7,10 +7,15 @@ class VueFinDuJeu{
 
     afficher(){
       document.getElementsByTagName("body")[0].innerHTML = this.html;
+     
+      let listeScore = document.getElementById("container");
+      const listeScoreItemHTML = listeScore.innerHTML;
+      
+      let listeScoreItemHTMLRemplacement = listeScoreItemHTML;
+          listeScoreItemHTMLRemplacement = listeScoreItemHTMLRemplacement.replace("{FinDuJeu.record}",this.record);
+          listeScoreItemHTMLRemplacement = listeScoreItemHTMLRemplacement.replace("{FinDuJeu.score}",this.score);
 
-      let score = document.getElementById("container");
-      const listeClassementItemHTML = score.innerHTML;
-      let listeClassementHTMLRemplacement = "";
+          listeScore.innerHTML = listeScoreItemHTMLRemplacement;
     }
 
 
