@@ -2,7 +2,7 @@ class JeuDAO
 {
     constructor()
     {
-        this.banqueJoueurs = {id:0, position:1, nom:LeTueur, score:666, musique:true, effets:true};
+        this.banqueJoueurs = {id:0, position:1, nom:"LeTueur", score:666, musique:true, effets:true};
     }
 
     lister()
