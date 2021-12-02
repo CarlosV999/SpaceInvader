@@ -1,7 +1,6 @@
 class FinDeJeuDAO{
      constructor(){
-         this.score = [
-             
-         ]
+            this.score = "2053";
+            this.record = "5875";
      }
 }
