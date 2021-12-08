@@ -5,6 +5,8 @@ let deplacement = 15;
 let direction = 1;
 let idEnvahisseurs
 let seDeplaceDroite = true
+let envahisseursTues = []
+let pointage
 
 for(let i = 0; i < 225; i++)
 {
@@ -24,8 +26,10 @@ function dessiner()
 {
     for(let i = 0; i < envahisseurs.length; i++)
     {
-
-        miniCarres[envahisseurs[i]].classList.add('envahisseur')
+        if(!envahisseursTues.includes(i))
+        {
+            miniCarres[envahisseurs[i]].classList.add('envahisseur')
+        }
 
     }
 }
@@ -98,7 +102,7 @@ function deplacementEnvahisseurs()
 
     if(miniCarres[emplacementJoueur].classList.contains('envahisseur', 'joueur'))
     {
-        etatDePartie.innerHTML = 'Vous Êtes Mort!!!'
+        etatDePartie.innerHTML = 'PERDU!!!'
         clearInterval(idEnvahisseurs)
     }
   
@@ -110,10 +114,15 @@ function deplacementEnvahisseurs()
         clearInterval(idEnvahisseurs)
       }     
     }
+    if(envahisseursTues.length === envahisseurs.length)
+    {
+        etatDePartie.innerHTML = 'Vous avez Gagné!!!'
+        clearInterval(idEnvahisseurs)
+    }
     
 }
 
-idEnvahisseurs = setInterval(deplacementEnvahisseurs, 50)
+idEnvahisseurs = setInterval(deplacementEnvahisseurs, 500)
 
 function tirer(e)
 {
@@ -124,6 +133,20 @@ function tirer(e)
         miniCarres[emplacementTire].classList.remove('tire')
         emplacementTire -= deplacement
         miniCarres[emplacementTire].classList.add('tire')
+        
+        if(miniCarres[emplacementTire].classList.contains('envahisseur'))
+        {
+            miniCarres[emplacementTire].classList.remove('tire')
+            miniCarres[emplacementTire].classList.remove('envahisseur')
+            miniCarres[emplacementTire].classList.add('explosion')
+
+            setTimeout(()=> miniCarres[emplacementTire].classList.remove('explosion'), 50)
+            clearInterval(idTire)
+
+            const supprissionDennemis = envahisseurs.indexOf(emplacementTire)
+            envahisseursTues.push(supprissionDennemis)
+            pointage++
+        } 
     }
     
     switch(e.key)

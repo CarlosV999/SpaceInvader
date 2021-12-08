@@ -28,5 +28,11 @@ left: 50%;
 
 .tire{
 
+    background-color: blue;
+}
+
+.explosion{
+
     background-color: red;
+
 }
