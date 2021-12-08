@@ -1,6 +1,6 @@
 class Application
 {
-    constructor(window, vueMenu, jeuDAO, vueClassement, vueJeu, vueFinDuJeu, vueOption)
+    constructor(window, classementDAO, vueMenu, jeuDAO, vueClassement, vueJeu, vueFinDuJeu, vueOption)
     {
         this.window = window;
         this.vueMenu = vueMenu;
@@ -8,8 +8,11 @@ class Application
         this.jeuDAO = jeuDAO;
         this.vueFinDuJeu = vueFinDuJeu;
         this.vueClassement = vueClassement;
+        this.classementDAO = classementDAO;
         this.vueOption = vueOption;
         this.vueMenu.afficher();
+        /*this.vueClassement.initialiserListeClassement(this.classementDAO.lister());
+        this.vueClassement.afficher();*/
         //this.vueClassement.afficher();
         //this.vueFinDuJeu.afficher();
         //this.vueJeu.afficher();
@@ -48,4 +51,4 @@ class Application
 
 }
 
-new Application(window, new VueMenu(), new JeuDAO(), new VueClassement(), new VueJeu(), new VueFinDuJeu(), new VueOption());
+new Application(window, new ClassementDAO(), new VueMenu(), new JeuDAO(), new VueClassement(), new VueJeu(), new VueFinDuJeu(), new VueOption());

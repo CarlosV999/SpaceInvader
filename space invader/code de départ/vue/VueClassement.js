@@ -13,6 +13,10 @@ class VueClassement{
                           {position:"#10", nom:"RollingInTheDeep", score:"998231", id:9}]
     }
 
+    initialiserListeClassement(listeClassementDonnee){
+      this.listeClassementDonnee = listeClassementDonnee;
+  }
+
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
 
