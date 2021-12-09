@@ -2,8 +2,6 @@ class ClassementDAO{
     
     constructor(){
       this.listeClassement = [];
-
-      this.listeClassement = result;
     }
     
       lister(){
