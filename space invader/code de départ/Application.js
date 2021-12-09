@@ -18,6 +18,7 @@ class Application
         //this.vueJeu.afficher();
 
         this.window.addEventListener("hashchange", () =>this.naviguer());
+        
         this.naviguer();
         
     }
@@ -30,11 +31,12 @@ class Application
 
     naviguer(){
         let hash = window.location.hash;
-    
+        console.log(hash);
         if(!hash){
             //this.vueFinDuJeu.afficher();
             //this.vueClassement.afficher();
             this.vueMenu.afficher();
+            
         }
         else if(hash.match(/^#jouer/)){
     

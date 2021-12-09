@@ -28,7 +28,6 @@ body {
     
     position: relative;
     top: -5rem;
-    z-index: -1;
 }
 
 .frame1 {
@@ -72,8 +71,6 @@ p {
     color: black;
     font-family: 'Mrs Kichinto', sans-serif;
     font-size: 25px;
-    text-decoration: none;
-    cursor:progress;
 }
 .btn-group {
     margin-top: 80px;
