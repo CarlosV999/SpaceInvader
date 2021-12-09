@@ -13,21 +13,21 @@ class VueClassement{
                           {position:"#10", nom:"RollingInTheDeep", score:"998231", id:9}]
     }
 
-    initialiserListeClassement(listeClassementDonnee){
+    /*initialiserListeClassement(listeClassementDonnee){
       this.listeClassementDonnee = listeClassementDonnee;
-  }
+  }*/
 
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
 
-        for(let positionListe in this.listeClassementDonnee){
+        /*for(let positionListe in this.listeClassementDonnee){
             let classement = new Joueur(this.listeClassementDonnee[positionListe].id,
                                     this.listeClassementDonnee[positionListe].position,
                                     this.listeClassementDonnee[positionListe].nom,
                                     this.listeClassementDonnee[positionListe].score);
       
             this.listeClassementDonnee[classement.id] = classement;
-          }
+          }*/
 
         let listeClassement = document.getElementById("container");
         const listeClassementItemHTML = listeClassement.innerHTML;
