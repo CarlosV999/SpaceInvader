@@ -2,24 +2,8 @@ class ClassementDAO{
     
     constructor(){
       this.listeClassement = [];
-      var mysql = require('mysql');
 
-      var con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "6785"
-      });
-
-      con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-      });
-
-      /*var sql = "";
-      con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("Result: " + result);
-      });*/
+      this.listeClassement = result;
     }
     
       lister(){
