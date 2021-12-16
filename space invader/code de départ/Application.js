@@ -41,6 +41,7 @@ class Application
         else if(hash.match(/^#jouer/)){
     
             this.vueJeu.afficher();
+            this.vueJeu.jouer();
       
           }
           else if(hash.match(/^#options/))
