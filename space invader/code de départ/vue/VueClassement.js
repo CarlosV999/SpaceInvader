@@ -42,9 +42,9 @@ class VueClassement{
     
         for(var numeroClassement in listeClassementDonnee){
           let listeClassementItemHTMLRemplacement = listeClassementItemHTML;
-          listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.position}",this.listeClassementDonnee[numeroClassement].position);
-          listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.nom}",this.listeClassementDonnee[numeroClassement].nom);
-          listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.score}",this.listeClassementDonnee[numeroClassement].score);
+          listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.position}",listeClassementDonnee[numeroClassement].position);
+          listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.nom}",listeClassementDonnee[numeroClassement].nom);
+          listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.score}",listeClassementDonnee[numeroClassement].score);
           listeClassementHTMLRemplacement += listeClassementItemHTMLRemplacement;
         }
     

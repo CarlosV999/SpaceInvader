@@ -10,10 +10,10 @@ class Application
         this.vueClassement = vueClassement;
         this.classementDAO = classementDAO;
         this.vueOption = vueOption;
-        this.classementDAO.initialiserActionReceptionClassement(listeClassement =>this.actionReceptionClassement(listeClassement));
         this.vueMenu.afficher();
+        //this.vueClassement.afficher();
 
-        this.classementDAO.lister();
+
 
         /*this.vueClassement.initialiserListeClassement(this.classementDAO.lister());
         this.vueClassement.afficher();*/
@@ -52,10 +52,10 @@ class Application
         let hash = window.location.hash;
         console.log(hash);
         if(!hash){
-            //this.vueFinDuJeu.afficher();
-            //this.vueClassement.afficher();
             this.vueMenu.afficher();
-            
+    
+            /*this.vueClassement.afficher();
+            this.classementDAO.lister(listeClassement =>this.actionReceptionClassement(listeClassement));*/
         }
         else if(hash.match(/^#jouer/)){
     
@@ -71,7 +71,7 @@ class Application
           {
             console.log("Application.js->naviguer()->classement");
             this.vueClassement.afficher();
-
+            this.classementDAO.lister(listeClassement =>this.actionReceptionClassement(listeClassement));
           }
           /*
           else if(hash.match(/^#menu/))
