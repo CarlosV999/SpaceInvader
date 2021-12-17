@@ -1,5 +1,5 @@
 <?php
-require "Joueur.php";
+require_once "Joueur.php";
 
 class Accesseur{
     public static $basededonnees = null;
@@ -23,11 +23,11 @@ class JoueurDAO extends Accesseur{
     {
         JoueurDAO::initialiser();
 
-        $demandeJoueurs = JoueurDAO::$basededonnees->prepare();
+        $demandeJoueurs = JoueurDAO::$basededonnees->prepare("SELECT id,position,nom,score,musique FROM joueur");
         $demandeJoueurs->execute();
         //$contrats = $demandeContrats->fetchAll(PDO::FETCH_OBJ);
-        $logosTableau = $demandeLogos->fetchAll(PDO::FETCH_ASSOC);
+        $joueursTableau = $demandeJoueurs->fetchAll(PDO::FETCH_ASSOC);
         foreach($joueursTableau as $joueurTableau) $joueurs[] = new Joueur($joueurTableau);
         return $joueurs;
-
     }
+}

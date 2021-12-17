@@ -10,7 +10,11 @@ class Application
         this.vueClassement = vueClassement;
         this.classementDAO = classementDAO;
         this.vueOption = vueOption;
+        this.classementDAO.initialiserActionReceptionClassement(listeClassement =>this.actionReceptionClassement(listeClassement));
         this.vueMenu.afficher();
+
+        this.classementDAO.lister();
+
         /*this.vueClassement.initialiserListeClassement(this.classementDAO.lister());
         this.vueClassement.afficher();*/
         //this.vueClassement.afficher();
@@ -23,6 +27,11 @@ class Application
 
         document.addEventListener('deviceready', () =>this.initialiserNavigation(), false);
         
+    }
+
+    actionReceptionClassement(listeClassement)
+    {
+      this.vueClassement.afficherListe(listeClassement);
     }
 
     initialiserNavigation(){

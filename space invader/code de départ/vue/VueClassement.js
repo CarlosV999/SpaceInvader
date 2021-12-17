@@ -1,7 +1,7 @@
 class VueClassement{
     constructor(){
       this.html = document.getElementById("html-vue-classement").innerHTML;
-      this.listeClassementDonnee = [{position:"#1", nom:"SuperGeorge", score:"199000", id:0},
+      /*this.listeClassementDonnee = [{position:"#1", nom:"SuperGeorge", score:"199000", id:0},
                           {position:"#2", nom:"TheLegend27", score:"123523", id:1},
                           {position:"#3", nom:"ItsMeMario", score:"153238", id:2},
                           {position:"#4", nom:"BenOui", score:"174231", id:3},
@@ -10,7 +10,7 @@ class VueClassement{
                           {position:"#7", nom:"UnPseudo", score:"724062", id:6},
                           {position:"#8", nom:"ShiftingGhost", score:"552054", id:7},
                           {position:"#9", nom:"LuigiIsBetter", score:"242502", id:8},
-                          {position:"#10", nom:"RollingInTheDeep", score:"998231", id:9}]
+                          {position:"#10", nom:"RollingInTheDeep", score:"998231", id:9}]*/
     }
 
     /*initialiserListeClassement(listeClassementDonnee){
@@ -29,11 +29,18 @@ class VueClassement{
             this.listeClassementDonnee[classement.id] = classement;
           }*/
 
+        
+
+        this.pan();
+      }
+
+      afficherListe(listeClassementDonnee)
+      {
         let listeClassement = document.getElementById("container");
         const listeClassementItemHTML = listeClassement.innerHTML;
         let listeClassementHTMLRemplacement = "";
     
-        for(var numeroClassement in this.listeClassementDonnee){
+        for(var numeroClassement in listeClassementDonnee){
           let listeClassementItemHTMLRemplacement = listeClassementItemHTML;
           listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.position}",this.listeClassementDonnee[numeroClassement].position);
           listeClassementItemHTMLRemplacement = listeClassementItemHTMLRemplacement.replace("{Classement.nom}",this.listeClassementDonnee[numeroClassement].nom);
@@ -42,8 +49,6 @@ class VueClassement{
         }
     
         listeClassement.innerHTML = listeClassementHTMLRemplacement;
-
-        this.pan();
       }
 
       pan(){

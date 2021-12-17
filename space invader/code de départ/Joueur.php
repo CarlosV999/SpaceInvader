@@ -9,14 +9,12 @@ class Joueur
 			'nom' => FILTER_SANITIZE_ENCODED,
 			'score' => FILTER_SANITIZE_ENCODED,
 			'musique' => FILTER_SANITIZE_ENCODED,
-			'effets' => FILTER_VALIDATE_FLOAT,
 		);
 		
-	protected $position;
-	protected $nom;
-	protected $score;
-	protected $musique;
-	protected $effets;
+	public $position;
+	public $nom;
+	public $score;
+	public $musique;
 	
 	public function __construct($tableau)
 	{
@@ -27,7 +25,6 @@ class Joueur
 		$this->nom = $tableau['nom'];
 		$this->score = $tableau['score'];
 		$this->musique = $tableau['musique'];
-		$this->effets = $tableau['effets'];
 	}
 	
 	public function __set($propriete, $valeur)
@@ -48,9 +45,6 @@ class Joueur
 			break;
 			case 'musique':
 				$this->musique = $valeur;
-			break;
-			case 'effets':
-				$this->effets = $valeur;
 			break;
 		}
 	}

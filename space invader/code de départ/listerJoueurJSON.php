@@ -4,7 +4,7 @@ require "JoueurDAO.php";
 
 $listeJoueur = JoueurDAO::listerJoueurs();
 
-$jsonJoueur = $listeJoueur.json_encode();
+$jsonJoueur = json_encode($listeJoueur);
 
 echo($jsonJoueur);
 ?>
