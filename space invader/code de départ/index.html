@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="decoration/vueJeu.css">
     <link rel="stylesheet" type="text/css" href="decoration/option.css">
     <link href="http://fonts.cdnfonts.com/css/mrs-kichinto" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zingtouch/1.0.6/zingtouch.min.js" integrity="sha512-HmaXasRYOQJEXJWYwYCMcIA/XnPtW9WPvaBVWE2mQP6K31sRdcgaYUyB//P5540J4hFqMBcj6vkDEEGkwHkYdA==" crossorigin="anonymous"></script>
     <script src="vue/VueMenu.js"></script>
     <script src="modele/Joueur.js"></script>
     <script src="donnees/JeuDAO.js"></script>
@@ -19,13 +20,13 @@
     <script src="vue/VueFinDuJeu.js"></script>
     <script src="vue/VueOption.js"></script>
     <script defer src="Application.js"></script>
-    <script src='lib/zingtouch.min.js'></script>
 </head>
 <body>
     <div id="page-chargement-application"> Chargement de l'applis</div>
 
     <script type="plain/text" id="html-vue-menu">
-      <div id="body">
+      <div id="parent">
+      <div id="body-menu">
         <div class="frame1"> 
             <h1 href="#">Clone Space Invader</h1>
         </div> 
@@ -36,17 +37,22 @@
             </div>
         </div>
       </div>
+    </div>
     </script>
 
     <script type="plain/text" id="html-vue-classement">
-        <div class="frame1"> 
+      <div id="parent">
+      <div id="body-classement">  
+      <div class="frame1"> 
             <h1>Classement</h1>
         </div> 
         <div id="container">
             <div class="row">
                 <div class="position">{Classement.position}</div><div class="name">{Classement.nom}</div><div class="score">{Classement.score}</div>
             </div>
-        </div>
+      </div>
+      </div>
+    </div>
     </script>
 
   <script type="plain/text" id="html-vue-option">

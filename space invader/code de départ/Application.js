@@ -17,12 +17,21 @@ class Application
         //this.vueFinDuJeu.afficher();
         //this.vueJeu.afficher();
 
-        this.window.addEventListener("hashchange", () =>this.naviguer());
+        //this.window.addEventListener("hashchange", () =>this.naviguer());
         
-        this.naviguer();
+        //this.naviguer();
+
+        document.addEventListener('deviceready', () =>this.initialiserNavigation(), false);
         
     }
 
+    initialiserNavigation(){
+        console.log("Application-->initialiserNaviguation");
+        this.window.addEventListener("hashchange", ()=>this.naviguer());
+
+        setTimeout(() =>this.naviguer(), 3000);
+    }
+    
     actionModifierOption(joueur)
     {
         this.jeuDAO.modifier(joueur);
@@ -47,6 +56,16 @@ class Application
           {
             this.vueOption.afficher();
           }
+          else if(hash.match(/^#classement/))
+          {
+            this.vueClassement.afficher();
+          }
+          /*
+          else if(hash.match(/^#menu/))
+          {
+            this.vueMenu.afficher();
+          }
+          */
       }
 
 

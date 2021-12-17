@@ -42,5 +42,22 @@ class VueClassement{
         }
     
         listeClassement.innerHTML = listeClassementHTMLRemplacement;
+
+        this.pan();
+      }
+
+      pan(){
+        var myElement = document.getElementById("body-classement");
+        //console.log(document.getElementById("body-classement").innerHTML);
+        var zingTouch = new ZingTouch.Region(document.getElementById("parent"));
+        
+        zingTouch.bind(myElement, "pan", function(e) {
+          let angle = e.detail.data[0].directionFromOrigin;
+          if ((angle >= 315 && angle <= 360) || (angle <= 45 && angle >= 0)) {
+            (e.detail.events).forEach(_e => _e.originalEvent.preventDefault());
+            window.location = "";
+            return;
+          }
+        });
       }
 }
