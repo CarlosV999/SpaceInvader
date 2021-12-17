@@ -14,7 +14,7 @@ class VueMenu{
         var zingTouch = new ZingTouch.Region(document.getElementById("parent"));
         //console.log(document.getElementById("parent").innerHTML);
         var myElement = document.getElementById("body-menu");
-        zingTouch.bind(myElement, "swipe", function(e) {
+        zingTouch.bind(myElement, "pan", function(e) {
           let angle = e.detail.data[0].directionFromOrigin;
           if ((angle >= 135 && angle <= 225)) 
           {
