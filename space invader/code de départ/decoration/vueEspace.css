@@ -9,7 +9,8 @@ left: 50%;
 }
 
 .grille div{
-
+    margin:auto;
+    position:relative;
     width: 40px;
     height: 40px;
 }
@@ -35,4 +36,24 @@ left: 50%;
 
     background-color: red;
 
+}
+.pointage{
+    text-align: center;
+    top: 160px;
+    left: 1000px;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,139,253,0);
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+     background-color: #000000;
+     color:black;
+     font-size: 300%;
+}
+.resultat{
+    text-align: center;
+    top: 160px;
+    left: 1000px;
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,139,253,0);
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+     background-color: #000000;
+     color:black;
+     font-size: 300%;
 }

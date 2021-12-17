@@ -1,12 +1,13 @@
-const grille = document.querySelector('.grille')
-const etatDePartie = document.querySelector('.resultat')
-let emplacementJoueur = 202
+const grille = document.querySelector('.grille');
+const etatDePartie = document.querySelector('.resultat');
+let emplacementJoueur = 202;
+let niveau = 1;
 let deplacement = 15;
 let direction = 1;
-let idEnvahisseurs
-let seDeplaceDroite = true
-let envahisseursTues = []
-let pointage
+let idEnvahisseurs;
+let seDeplaceDroite = true;
+let envahisseursTues = [];
+let pointage = 0;
 
 for(let i = 0; i < 225; i++)
 {
@@ -14,13 +15,13 @@ for(let i = 0; i < 225; i++)
     grille.appendChild(carre)
 }
 
-const miniCarres = Array.from(document.querySelectorAll('.grille div'))
+const miniCarres = Array.from(document.querySelectorAll('.grille div'));
 
 const envahisseurs = [
     0,1,2,3,4,5,6,7,8,9,
     15,16,17,18,19,20,21,22,23,24,
     30,31,32,33,34,35,36,37,38,39
-]
+];
 
 function dessiner() 
 {
@@ -34,7 +35,7 @@ function dessiner()
     }
 }
 
-dessiner()
+dessiner();
 
 function effacer() 
 {
@@ -56,11 +57,12 @@ function deplacerJoueur(e)
     {
         case 'ArrowLeft':
             if(emplacementJoueur % deplacement != 0)
-                emplacementJoueur -=1
-            break
+                emplacementJoueur -=1;
+            break;
         case 'ArrowRight':
             if(emplacementJoueur % deplacement < deplacement -1)
-                emplacementJoueur +=1
+                emplacementJoueur +=1;
+                break;
     }
 
     miniCarres[emplacementJoueur].classList.add('joueur')
@@ -139,7 +141,6 @@ function tirer(e)
             miniCarres[emplacementTire].classList.remove('tire')
             miniCarres[emplacementTire].classList.remove('envahisseur')
             miniCarres[emplacementTire].classList.add('explosion')
-
             setTimeout(()=> miniCarres[emplacementTire].classList.remove('explosion'), 50)
             clearInterval(idTire)
 
