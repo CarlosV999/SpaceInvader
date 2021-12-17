@@ -17,11 +17,12 @@ class Application
         //this.vueFinDuJeu.afficher();
         //this.vueJeu.afficher();
 
-        //this.window.addEventListener("hashchange", () =>this.naviguer());
         
-        //this.naviguer();
-
-        document.addEventListener('deviceready', () =>this.initialiserNavigation(), false);
+        this.window.addEventListener("hashchange", () =>this.naviguer());
+        
+        this.naviguer();
+        
+       //document.addEventListener('deviceready', () =>this.initialiserNavigation(), false);
         
     }
 
@@ -59,7 +60,9 @@ class Application
           }
           else if(hash.match(/^#classement/))
           {
+            console.log("Application.js->naviguer()->classement");
             this.vueClassement.afficher();
+
           }
           /*
           else if(hash.match(/^#menu/))
