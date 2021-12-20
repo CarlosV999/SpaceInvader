@@ -1,20 +1,28 @@
+:root{
+    --grille-largueur: 600px;
+    --grille-longueur:600px;
+    --cellule-largueur:40px;
+    --cellule-longueur: 40px;
+    --bouton-largueur: 50px;
+    --bouton-longueur: 150px;;
+}
+
 .grille{
- width: 600px;
- height: 600px;
-border: solid white 1px;
-display: flex;
-flex-wrap: wrap;
-top: 50%;
-left: 50%;
+    width: var(--grille-largueur);
+    height: var(--grille-longueur);
+    border: solid white 1px;
+    display: flex;
+    flex-wrap: wrap;
+    top: 50%;
+    left: 50%;
 }
 
 .grille div{
     margin:auto;
     position:relative;
-    width: 40px;
-    height: 40px;
+    width: var(--cellule-largueur);
+    height: var(--cellule-longueur);
 }
-
 .envahisseur{
 
     background-color: aqua;
@@ -56,4 +64,36 @@ left: 50%;
      background-color: #000000;
      color:black;
      font-size: 300%;
+}
+.bouton-gauche{
+    display:table-cell;
+    background-color: black;
+    width: var(--bouton-longueur);
+    height: var(--bouton-largueur);
+}
+.bouton-droit{
+    right: -30%;
+    bottom: 30%;
+    display:table-cell;
+    background-color: black;
+    width: var(--bouton-longueur);
+    height: var(--bouton-largueur);
+}
+.bouton-feu{
+    display:table-cell;
+    right: -175%;
+    background-color: black;
+    width: var(--bouton-longueur);
+    height: var(--bouton-largueur);
+}
+.controle-direction{
+    display: table-row;
+    width: var(--grille-longueur);
+}
+.image-jeu{    
+}
+.controle-jeu{
+    display: table;
+    background-color: rgb(156, 134, 106);
+    width: var(--grille-longueur);
 }
