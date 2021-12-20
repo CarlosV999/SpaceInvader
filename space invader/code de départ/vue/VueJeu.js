@@ -6,6 +6,17 @@ class VueJeu{
 
       afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
+        let largueurEcran = window.screen.width;
+        let largueurCellule = largueurEcran/15;
+        let longueurBouton = largueurEcran/3;
+        let largueurBouton = largueurCellule*2;
+        document.documentElement.style.setProperty('--grille-largueur', largueurEcran+'px');
+        document.documentElement.style.setProperty('--grille-longueur', largueurEcran+'px');
+        document.documentElement.style.setProperty('--cellule-largueur', largueurCellule+'px');
+        document.documentElement.style.setProperty('--cellule-longueur', largueurCellule+'px');
+        document.documentElement.style.setProperty('--bouton-longueur', longueurBouton+'px');
+        document.documentElement.style.setProperty('--bouton-largueur', largueurBouton+'px');
+         
 
       }
 
@@ -141,7 +152,7 @@ class VueJeu{
         function tirer(e)
         {
             let idTire
-            let emplacementTire = emplacementJoueur
+            let emplacementTire = emplacementJoueur;
             function mouvementTir()
             {
                 miniCarres[emplacementTire].classList.remove('tire')
@@ -159,7 +170,9 @@ class VueJeu{
                     const supprissionDennemis = envahisseurs.indexOf(emplacementTire)
                     envahisseursTues.push(supprissionDennemis)
                     pointage++
+                    
                 } 
+                document.getElementById('pointage').innerHTML = "Score: "+pointage;
             }
             
             switch(e.key)
@@ -172,7 +185,7 @@ class VueJeu{
         document.addEventListener('keydown', tirer)
               }
   finJouer(){
-    
+
               }
 
 

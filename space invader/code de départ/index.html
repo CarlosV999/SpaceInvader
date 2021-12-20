@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="decoration/classement.css">
     <link rel="stylesheet" type="text/css" href="decoration/finDuJeu.css">
     <link rel="stylesheet" type="text/css" href="decoration/vueJeu.css">
+    <link rel="stylesheet" type="text/css" href="decoration/vueEspace.css">
     <link rel="stylesheet" type="text/css" href="decoration/option.css">
     <link href="http://fonts.cdnfonts.com/css/mrs-kichinto" rel="stylesheet">
     <script src="vue/VueMenu.js"></script>
@@ -19,16 +20,15 @@
     <script src="vue/VueFinDuJeu.js"></script>
     <script src="vue/VueOption.js"></script>
     <script defer src="Application.js"></script>
-    <script src="lib\zingtouch.min.js"></script>
+    <script src='lib/zingtouch.min.js'></script>
 </head>
 <body>
     <div id="page-chargement-application"> Chargement de l'applis</div>
 
     <script type="plain/text" id="html-vue-menu">
-      <div id="parent" >
-      <div id="body-menu">
+      <div id="body">
         <div class="frame1"> 
-            <h1>Clone Space Invader</h1>
+            <h1 href="#">Clone Space Invader</h1>
         </div> 
         <div class="frame">
             <div class="btn-group">
@@ -37,22 +37,17 @@
             </div>
         </div>
       </div>
-    </div>
     </script>
 
     <script type="plain/text" id="html-vue-classement">
-      <div id="parent">
-      <div id="body-classement">  
-      <div class="frame1"> 
+        <div class="frame1"> 
             <h1>Classement</h1>
         </div> 
         <div id="container">
             <div class="row">
                 <div class="position">{Classement.position}</div><div class="name">{Classement.nom}</div><div class="score">{Classement.score}</div>
             </div>
-      </div>
-      </div>
-    </div>
+        </div>
     </script>
 
   <script type="plain/text" id="html-vue-option">
@@ -123,8 +118,15 @@
    </script>
 
    <script type="plain/text" id="html-vue-jeu">
-    <div class="game">
-        <img id ="imgJeu" src = "prototypes/imageJeu.png">
+    <h1 class="resultat">Tuez les Tous!!!</h1>
+    <h2 class="pointage" id="pointage">Score: 0</h2>
+    <div class="grille"></div> 
+    <div class="controle-jeu">      
+      <div class="controle-direction">
+        <div class="bouton-gauche"><img class="image-jeu" src="img\fleche-gauche.png"><img></div>
+        <div class="bouton-droit"><img class="image-jeu" src="img\fleche-droite.png"><img></div>
+        <div class="bouton-feu"></div>
+      </div>    
     </div>
 </script>
 
