@@ -10,7 +10,7 @@ class Application
         this.vueClassement = vueClassement;
         this.classementDAO = classementDAO;
         this.vueOption = vueOption;
-        this.vueMenu.afficher();
+        //this.vueMenu.afficher();
         //this.vueClassement.afficher();
 
 
