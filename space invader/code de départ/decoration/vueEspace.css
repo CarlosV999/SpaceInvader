@@ -91,6 +91,8 @@
     width: var(--grille-longueur);
 }
 .image-jeu{    
+    width: var(--bouton-longueur);
+    height: var(--bouton-largueur);
 }
 .controle-jeu{
     display: table;

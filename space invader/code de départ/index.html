@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <title>Clone Space Invader</title>
     <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="decoration/classement.css">
     <link rel="stylesheet" type="text/css" href="decoration/finDuJeu.css">
     <link rel="stylesheet" type="text/css" href="decoration/vueJeu.css">
-    <link rel="stylesheet" type="text/css" href="decoration/vueEspace.css">
     <link rel="stylesheet" type="text/css" href="decoration/option.css">
     <link href="http://fonts.cdnfonts.com/css/mrs-kichinto" rel="stylesheet">
     <script src="vue/VueMenu.js"></script>
@@ -20,15 +19,16 @@
     <script src="vue/VueFinDuJeu.js"></script>
     <script src="vue/VueOption.js"></script>
     <script defer src="Application.js"></script>
-    <script src='lib/zingtouch.min.js'></script>
+    <script src="lib\zingtouch.min.js"></script>
 </head>
 <body>
     <div id="page-chargement-application"> Chargement de l'applis</div>
 
     <script type="plain/text" id="html-vue-menu">
-      <div id="body">
+      <div id="parent" >
+      <div id="body-menu">
         <div class="frame1"> 
-            <h1 href="#">Clone Space Invader</h1>
+            <h1>Clone Space Invader</h1>
         </div> 
         <div class="frame">
             <div class="btn-group">
@@ -37,17 +37,22 @@
             </div>
         </div>
       </div>
+    </div>
     </script>
 
     <script type="plain/text" id="html-vue-classement">
-        <div class="frame1"> 
+      <div id="parent">
+      <div id="body-classement">  
+      <div class="frame1"> 
             <h1>Classement</h1>
         </div> 
         <div id="container">
             <div class="row">
                 <div class="position">{Classement.position}</div><div class="name">{Classement.nom}</div><div class="score">{Classement.score}</div>
             </div>
-        </div>
+      </div>
+      </div>
+    </div>
     </script>
 
   <script type="plain/text" id="html-vue-option">
@@ -123,9 +128,9 @@
     <div class="grille"></div> 
     <div class="controle-jeu">      
       <div class="controle-direction">
-        <div class="bouton-gauche"><img class="image-jeu" src="img\fleche-gauche.png"><img></div>
-        <div class="bouton-droit"><img class="image-jeu" src="img\fleche-droite.png"><img></div>
-        <div class="bouton-feu"></div>
+        <div id="bouton-gauche" class="bouton-gauche"><img class="image-jeu" src="img\fleche-gauche.png"><img></div>
+        <div id="bouton-droit" class="bouton-droit"><img class="image-jeu" src="img\fleche-droite.png"><img></div>
+        <div id="bouton-feu" class="bouton-feu"></div>
       </div>    
     </div>
 </script>
