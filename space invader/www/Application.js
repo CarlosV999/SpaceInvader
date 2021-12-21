@@ -51,9 +51,9 @@ class Application
     naviguer(){
         let hash = window.location.hash;
         console.log(hash);
-        if(!hash){
+        if(!hash || (hash.match(/^#menu/)) ){
             this.vueMenu.afficher();
-    
+            //this.vueMenu
             /*this.vueClassement.afficher();
             this.classementDAO.lister(listeClassement =>this.actionReceptionClassement(listeClassement));*/
         }
