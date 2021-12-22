@@ -7,13 +7,6 @@ class JeuDAO
 
     lister()
     {
-        /*$(document).ready(function() {
-            $.getJSON("https://www.devquora.com/test/json.php", function(result) {
-                $.each(result, function(i, field) {
-                    $("#output").append("Title: " + field.title + " duration: " + field.duration + " Price:" + field.price + "<br/>");
-                });
-            });
-        });*/
         
             let joueur = new Joueur(this.banqueJoueurs.id,
                                     this.banqueJoueurs.position,

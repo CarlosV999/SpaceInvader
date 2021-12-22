@@ -10,38 +10,19 @@ class Application
         this.vueClassement = vueClassement;
         this.classementDAO = classementDAO;
         this.vueOption = vueOption;
-        //this.vueMenu.afficher();
-        //this.vueClassement.afficher();
-
-
-
+        this.vueMenu.afficher();
         /*this.vueClassement.initialiserListeClassement(this.classementDAO.lister());
         this.vueClassement.afficher();*/
         //this.vueClassement.afficher();
         //this.vueFinDuJeu.afficher();
         //this.vueJeu.afficher();
 
-        
         this.window.addEventListener("hashchange", () =>this.naviguer());
         
         this.naviguer();
         
-       //document.addEventListener('deviceready', () =>this.initialiserNavigation(), false);
-        
     }
 
-    actionReceptionClassement(listeClassement)
-    {
-      this.vueClassement.afficherListe(listeClassement);
-    }
-
-    initialiserNavigation(){
-        console.log("Application-->initialiserNaviguation");
-        this.window.addEventListener("hashchange", ()=>this.naviguer());
-
-        setTimeout(() =>this.naviguer(), 3000);
-    }
-    
     actionModifierOption(joueur)
     {
         this.jeuDAO.modifier(joueur);
@@ -51,11 +32,11 @@ class Application
     naviguer(){
         let hash = window.location.hash;
         console.log(hash);
-        if(!hash || (hash.match(/^#menu/)) ){
+        if(!hash){
+            //this.vueFinDuJeu.afficher();
+            //this.vueClassement.afficher();
             this.vueMenu.afficher();
-            //this.vueMenu
-            /*this.vueClassement.afficher();
-            this.classementDAO.lister(listeClassement =>this.actionReceptionClassement(listeClassement));*/
+            
         }
         else if(hash.match(/^#jouer/)){
     
@@ -67,18 +48,6 @@ class Application
           {
             this.vueOption.afficher();
           }
-          else if(hash.match(/^#classement/))
-          {
-            console.log("Application.js->naviguer()->classement");
-            this.vueClassement.afficher();
-            this.classementDAO.lister(listeClassement =>this.actionReceptionClassement(listeClassement));
-          }
-          /*
-          else if(hash.match(/^#menu/))
-          {
-            this.vueMenu.afficher();
-          }
-          */
       }
 
 

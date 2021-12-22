@@ -69,10 +69,8 @@ class VueJeu{
         }
 
 
-        miniCarres[emplacementJoueur].classList.add('joueur')
-
-
-        function deplacerJoueur(e)
+        miniCarres[emplacementJoueur].classList.add('joueur');
+        /*function deplacerJoueur(e)
         {
             miniCarres[emplacementJoueur].classList.remove('joueur')
 
@@ -87,11 +85,34 @@ class VueJeu{
                         emplacementJoueur +=1;
                         break;
             }
+            
+            miniCarres[emplacementJoueur].classList.add('joueur')
+        }
+        */
+
+        function deplacerJoueurVersGauche()
+        {
+            miniCarres[emplacementJoueur].classList.remove('joueur')
+
+            if(emplacementJoueur % deplacement != 0)
+                emplacementJoueur -=1;
 
             miniCarres[emplacementJoueur].classList.add('joueur')
         }
 
-        document.addEventListener('keydown', deplacerJoueur)
+        function deplacerJoueurVersDroite()
+        {
+            miniCarres[emplacementJoueur].classList.remove('joueur')
+            
+            if(emplacementJoueur % deplacement < deplacement -1)
+                emplacementJoueur +=1;
+            
+            miniCarres[emplacementJoueur].classList.add('joueur')
+        }
+  
+        document.getElementById("bouton-gauche").addEventListener("click", deplacerJoueurVersGauche);
+        document.getElementById("bouton-droit").addEventListener("click", deplacerJoueurVersDroite);
+        //document.addEventListener('keydown', deplacerJoueur)
 
         function deplacementEnvahisseurs()
         {
@@ -143,13 +164,14 @@ class VueJeu{
             {
                 etatDePartie.innerHTML = 'Vous avez Gagné!!!'
                 clearInterval(idEnvahisseurs)
+                //Application.finJouer.
             }
             
         }
 
         idEnvahisseurs = setInterval(deplacementEnvahisseurs, 500)
 
-        function tirer(e)
+        function tirer()
         {
             let idTire
             let emplacementTire = emplacementJoueur;
@@ -174,16 +196,14 @@ class VueJeu{
                 } 
                 document.getElementById('pointage').innerHTML = "Score: "+pointage;
             }
+     
+            idTire = setInterval(mouvementTir, 100)
             
-            switch(e.key)
-            {
-                case 'ArrowUp':
-                    idTire = setInterval(mouvementTir, 100)
-            }
         }
-
-        document.addEventListener('keydown', tirer)
+        document.getElementById("bouton-feu").addEventListener("click", tirer);
+        //document.addEventListener('keydown', tirer)
               }
+              
   finJouer(){
 
               }
