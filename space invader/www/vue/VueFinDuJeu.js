@@ -1,8 +1,8 @@
 class VueFinDuJeu{
     constructor(){
         this.html = document.getElementById("html-vue-fin-du-jeu").innerHTML;
-        this.score = "2053";
-        this.record = "5875";
+        this.score = "230492";
+        this.record = "359298";
     }
 
     afficher(){
