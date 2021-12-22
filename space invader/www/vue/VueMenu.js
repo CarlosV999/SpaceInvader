@@ -5,7 +5,7 @@ class VueMenu{
 
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
-        this.pan();
+        //this.pan();
       }
 
 
