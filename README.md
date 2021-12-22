@@ -29,3 +29,5 @@ Réouverture de l'application -> récupération highscore et pseudo via l'id enr
 
 **Échantillons des données échangées**:
 JSON
+
+vidéo de présentation du projet en fin de semestre : https://youtu.be/Fmgze4CLdKk
