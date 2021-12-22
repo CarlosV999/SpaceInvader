@@ -48,6 +48,11 @@ class Application
           {
             this.vueOption.afficher();
           }
+          else if(hash.match(/^#findejeu/))
+          {
+            this.vueFinDuJeu.afficher();
+          }
+          
       }
 
 

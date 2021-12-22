@@ -158,12 +158,14 @@ class VueJeu{
               {
                 etatDePartie.innerHTML = 'PERDU!!!'
                 clearInterval(idEnvahisseurs)
+                this.window.location.hash = "#findejeu";
               }     
             }
             if(envahisseursTues.length === envahisseurs.length)
             {
                 etatDePartie.innerHTML = 'Vous avez Gagné!!!'
                 clearInterval(idEnvahisseurs)
+                this.window.location.hash = "#findejeu";
                 //Application.finJouer.
             }
             
