@@ -150,6 +150,7 @@ class VueJeu{
             {
                 etatDePartie.innerHTML = 'PERDU!!!'
                 clearInterval(idEnvahisseurs)
+                window.location = "#findejeu";
             }
           
             for(let i = 0; i< envahisseurs.length; i++)
@@ -158,7 +159,6 @@ class VueJeu{
               {
                 etatDePartie.innerHTML = 'PERDU!!!'
                 clearInterval(idEnvahisseurs)
-                window.location = "#findejeu";
               }     
             }
             if(envahisseursTues.length === envahisseurs.length)
