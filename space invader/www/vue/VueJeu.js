@@ -113,7 +113,7 @@ class VueJeu{
         document.getElementById("bouton-gauche").addEventListener("click", deplacerJoueurVersGauche);
         document.getElementById("bouton-droit").addEventListener("click", deplacerJoueurVersDroite);
         //document.addEventListener('keydown', deplacerJoueur)
-
+        
         function deplacementEnvahisseurs()
         {
             const bordGauche = envahisseurs[0] % deplacement === 0

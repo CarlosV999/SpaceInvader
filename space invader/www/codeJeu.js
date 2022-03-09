@@ -70,6 +70,7 @@ function deplacerJoueur(e)
 
 document.addEventListener('keydown', deplacerJoueur)
 
+
 function deplacementEnvahisseurs()
 {
     const bordGauche = envahisseurs[0] % deplacement === 0
