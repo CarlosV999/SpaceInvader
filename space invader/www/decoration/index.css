@@ -143,6 +143,7 @@
   .score {
       position: relative;
       display: inline-block;
+      text-align: center;
       width: 20%;
       font-size: 22px;
       text-shadow: #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FFF 0px 0px 20px, #FF2D95 0px 0px 25px, #FF2D95 0px 0px 35px, #FF2D95 0px 0px 45px, #FF2D95 0px 0px 55px, #FF2D95 0px 0px 80px;
@@ -324,13 +325,11 @@
   
   #score {
       text-align: center;
-      top: 160px;
-      left: 1000px;
       box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(255,139,253,0);
       text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
        background-color: #000000;
        color:black;
-       font-size: 300%;
+       font-size: 30px;
   }
   
   .bouton-gauche{

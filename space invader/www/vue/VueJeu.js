@@ -171,7 +171,8 @@ class VueJeu{
             
         }
 
-        idEnvahisseurs = setInterval(deplacementEnvahisseurs, 500)
+        idEnvahisseurs = setInterval(deplacementEnvahisseurs, 500)   
+        document.getElementById("bouton-feu").addEventListener("click", tirer);
 
         function tirer()
         {
@@ -202,9 +203,13 @@ class VueJeu{
             idTire = setInterval(mouvementTir, 100)
             
         }
-        document.getElementById("bouton-feu").addEventListener("click", tirer);
         //document.addEventListener('keydown', tirer)
               }
+
+   getPointage(){
+       return pointage;
+   }
+
               
   finJouer(){
 
