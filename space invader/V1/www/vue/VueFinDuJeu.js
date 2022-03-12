@@ -10,6 +10,8 @@ class VueFinDuJeu{
         let record = 0 ;
 
         score = this.vueJeu.getPointage();
+        console.log(score);
+        document.getElementById('score').innerHTML = "Score: "+score;
 
       /*
       let listeScore = document.getElementById("container");
