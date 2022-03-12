@@ -12,3 +12,9 @@
     top: 373px;
     background-color:white;
 }
+
+.laser {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
