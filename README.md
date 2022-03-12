@@ -2,9 +2,20 @@
 
 ##Jeux type space invader
 
+[README de la V2]
+- Technologies: HTML, CSS, JS, navigateur web.
+
+Résumé:
+
+Le projet est un shoot'em up fixe en deux dimensions. 
+
+Le joueur contrôle un canon laser qu'il peut déplacer verticalement, à gauche de l'écran. Sur la droite, des rangées d'aliens arrivent en se déplacant de haut en bas tout en se rapprochant progressivement du joueur en lançant des projectiles. L'objectif est de détruire avec le canon laser du vaisseau une vague ennemie, avant qu'elle ne dépasse le joueur. Le joueur gagne des points à chaque fois qu'il détruit un envahisseur. Le score du joueur est affiché sur l'écran. Le jeu n'autorise qu'un tir à la fois et permet d'annuler ceux des ennemis en tirant dessus. La vitesse et la musique s'accélèrent au fur et à mesure que le nombre d'aliens diminue. L'élimination totale de ces derniers amène une nouvelle vague ennemie plus difficile, et ce indéfiniment. Le jeu ne se termine que lorsque le joueur perd toutes ses vies qui sont représentés par un modèle de canons en dehors du champ de jeu.
+
+
+[README de la V1]
 - Architecture: Cordova
 - Gesture: swipe vers un autre écran
-- Données distantes: BDD pour les scores et les joueurs (XML)
+- Données distantes: BDD pour les scores et les joueurs (XML) [Pas implémenté]
 - Librairie: https://createjs.com/
 - Composant de l’appareil: GPS (pour le scoreboard local)
 
