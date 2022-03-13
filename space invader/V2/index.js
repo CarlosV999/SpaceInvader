@@ -1,5 +1,20 @@
 const shooter = document.getElementById("player-controlled-shooter")
 const mainPlayArea = document.getElementById("main-play-area")
+const startButton = document.getElementById("start-button")
+const instructions = document.getElementById("instructions-text")
+
+startButton.addEventListener("click", (event)=>{
+    playGame()
+})
+
+function playGame(){
+    startButton.style.display = 'none'
+    instructions.style.display = 'none'
+    window.addEventListener("keydown", letShipFly)
+    let justice = new Audio("audio/Justice - One Minute To Midnight - † (Official Audio) (128 kbps).mp3")
+    justice.play()
+    let moveMonsterInterval = setInterval(()=>{createMonster()}, 2100)
+}
 
 function moveUp() {
     let topPosition = window.getComputedStyle(shooter).getPropertyValue('top')
@@ -45,7 +60,7 @@ function letShipFly(event) {
         fireLaser()
     }
 }
-window.addEventListener("keydown", letShipFly)  
+//window.addEventListener("keydown", letShipFly)  
 
 function fireLaser(){
     let laser = createLaserElement()
@@ -118,7 +133,7 @@ function moveMonster (monster){
     },30)
 }
 
-setInterval(createMonster(), 100)
+//setInterval(createMonster(), 100)
 
 function checkLaserCollision(laser, monster) {
     

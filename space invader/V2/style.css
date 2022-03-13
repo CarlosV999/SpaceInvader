@@ -45,3 +45,11 @@
     height: 20px;
     position: absolute;
 }
+
+#instructions-text {
+    color: white;
+}
+
+h1{
+    color: white;
+}
