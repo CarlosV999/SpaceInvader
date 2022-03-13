@@ -2,10 +2,13 @@ const shooter = document.getElementById("player-controlled-shooter")
 const mainPlayArea = document.getElementById("main-play-area")
 const startButton = document.getElementById("start-button")
 const instructions = document.getElementById("instructions-text")
+const scoreCounter = document.querySelector('#score span')
 
 startButton.addEventListener("click", (event)=>{
     playGame()
 })
+
+
 
 function playGame(){
     startButton.style.display = 'none'
@@ -92,6 +95,7 @@ function moveLaser(laser) {
                 monster.src = 'images/explosion.png'
                 monster.classList.remove('monster')
                 monster.classList.add('dead-monster')
+                scoreCounter.innerText = parseInt(scoreCounter.innerText) + 100
             }
         })
         //console.log(xPosition)
