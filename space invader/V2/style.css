@@ -1,15 +1,15 @@
 #main-play-area{
     background-image: url('images/BackGround.png');
-    width: 1500px;
-    height: 760px;
+    width: 400px;
+    height: 400px;
 }
 
 #player-controlled-shooter{
-    width: 140px;
-    height: 80px;
+    width: 40px;
+    height: 20px;
     position: relative;
     left: 20px;
-    top: 373px;
+    top: 180px;
     background-color:white;
 }
 
@@ -17,4 +17,13 @@
     width: 20px;
     height: 20px;
     position: relative;
+}
+
+.monster {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 6px 3px #fff, 0 0 5px 6px #f0f, 0 0 9px 9px #0ff;
 }

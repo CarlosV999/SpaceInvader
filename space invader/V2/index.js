@@ -4,13 +4,13 @@ const mainPlayArea = document.getElementById("main-play-area")
 function moveUp() {
     let topPosition = window.getComputedStyle(shooter).getPropertyValue('top')
     //console.log(shooter.style.top)
-    if (shooter.style.top === "5px"){
+    if (shooter.style.top === "0px"){
         return
     }
 
     else {
         let position = parseInt(topPosition)
-        position -= 8
+        position -= 4
         shooter.style.top = `${position}px`
     }
 }
@@ -18,13 +18,13 @@ function moveUp() {
 function moveDown() {
     let topPosition = window.getComputedStyle(shooter).getPropertyValue('top')
     //console.log(shooter.style.top)
-    if(shooter.style.top === "685px") {
+    if(shooter.style.top === "360px") {
         return
     }
 
     else{
         let position = parseInt(topPosition)
-        position += 8
+        position += 4
         shooter.style.top = `${position}px`
     }
 }
@@ -62,7 +62,7 @@ function createLaserElement() {
     newLaser.src = 'images/laser.png'
     newLaser.classList.add('laser')
     newLaser.style.left =`${xPosition}px`
-    newLaser.style.top = `${yPosition -20}px`
+    newLaser.style.top = `${yPosition - 10}px`
     return newLaser
 }
 
@@ -70,12 +70,42 @@ function moveLaser(laser) {
     let laserInterval = setInterval(()=> {
         let xPosition = parseInt(laser.style.left)
         //console.log(xPosition)
-        if (xPosition === 1492) {
+        if (xPosition === 340) {
             laser.remove()
         }
 
         else {
-            laser.style.left = `${xPosition + 8}px`
+            laser.style.left = `${xPosition + 4}px`
         }
     }, 10)
 }
+
+//const monsterImgs = ['images/Alien1.png','images/Alien2.png']
+
+function createMonster(){
+    let newMonster = document.createElement('img')
+    //let monsterSpriteImg = monsterImgs[Math.floor(Math.random()*monsterImgs,length)]
+    //newMonster.src = monsterSpriteImg
+    newMonster.src = 'images/Alien1.png'
+    newMonster.classList.add('monster')
+    newMonster.style.left = '370px'
+    newMonster.style.top = `${Math.floor(Math.random()* 330)+ 30}px`
+    mainPlayArea.appendChild(newMonster)
+    moveMonster(newMonster)
+    
+}
+
+function moveMonster (monster){
+    let moveMonsterInterval = setInterval(()=>{
+        let xPosition= parseInt(window.getComputedStyle(monster).getPropertyValue('left'))
+        if(xPosition <= 50) {
+            monster.remove()
+        }
+        
+        else {
+            monster.style.left=`${xPosition - 4}px`
+        }
+    },30)
+}
+
+setInterval(createMonster(), 10000)
