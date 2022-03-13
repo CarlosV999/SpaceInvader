@@ -69,6 +69,16 @@ function createLaserElement() {
 function moveLaser(laser) {
     let laserInterval = setInterval(()=> {
         let xPosition = parseInt(laser.style.left)
+        let monsters = document.querySelectorAll(".monster")
+        monsters.forEach(monster => {
+            if (checkLaserCollision(laser, monster)){
+                let explosion = new Audio('audio/Explosion Sound Effect (128 kbps).mp3')
+                explosion.play()
+                monster.src = 'images/explosion.png'
+                monster.classList.remove('monster')
+                monster.classList.add('dead-monster')
+            }
+        })
         //console.log(xPosition)
         if (xPosition === 340) {
             laser.remove()
@@ -108,4 +118,26 @@ function moveMonster (monster){
     },30)
 }
 
-setInterval(createMonster(), 10000)
+setInterval(createMonster(), 100)
+
+function checkLaserCollision(laser, monster) {
+    
+    let laserLeft = parseInt(laser.style.left)
+    let laserTop = parseInt(laser.style.top)
+    let laserBottom = laserTop - 20
+    let monsterTop = parseInt(monster.style.top)
+    let monsterBottom = monsterTop - 30
+    let monsterLeft = parseInt(monster.style.left)
+
+    if(laserLeft != 340 && laserLeft + 40 >= monsterLeft) {
+        if( (laserTop <= monsterTop && laserTop >= monsterBottom) ) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else {
+        return false
+    }
+}
